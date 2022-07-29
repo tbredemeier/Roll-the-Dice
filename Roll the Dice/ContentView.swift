@@ -14,8 +14,9 @@ struct ContentView: View {
             Text("Dice Roll")
                 .padding()
                 .font(.title)
-            Text("\(randomValue)")
-                .font(.system(size: 72))
+            Image("pips \(randomValue)")
+                .resizable()
+                .frame(width: 200, height: 200, alignment: .center)
                 .padding()
                 .onTapGesture {
                     randomValue = Int.random(in: 1...6)
