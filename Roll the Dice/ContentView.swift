@@ -23,7 +23,7 @@ struct ContentView: View {
                 .padding()
                 .onTapGesture {
                     randomValue = Int.random(in: 1...6)
-                    withAnimation(.default) {
+                    withAnimation(.interpolatingSpring(stiffness: 10, damping: 2)) {
                         rotation += 360
                     }
                 }
